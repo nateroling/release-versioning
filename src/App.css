@@ -1,38 +1,54 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+}
+
+.Right {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+.VersionTable {
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.VersionTable tr.active {
+  background-color: yellow;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Timeline {
+  padding: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ReleaseBox {
+  margin: 20px;
+  width: 200px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.ReleaseBox__label {
+  border-bottom:1px solid black;
+  padding: 10px;
+}
+
+.ReleaseBox__text {
+  font-size: 200%;
+}
+
+.ReleaseBoxes {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+X.MuiSlider-markLabel {
+  transform-origin: top right ;
+  transform: translateX(-100%) rotate(-90deg) !important
 }
